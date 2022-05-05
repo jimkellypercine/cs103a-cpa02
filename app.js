@@ -124,15 +124,9 @@ app.get("/about", (req, res, next) => {
 
 app.get('/upsertDB',
   async (req,res,next) => {
-    for (anime of atitles){
-      const {studio,genres,hype,title} = anime;
-      // const num = getNum(coursenum);
-      // const strTime = strTimes
-      // course.strTimes = strTime
+    await Animedata.deleteMany({})
+    await Animedata.insertMany(atitles)
 
-      // course.suffix = coursenum.slice(num.length)
-      await Animedata.findOneAndUpdate({studio,genres,hype,title},anime,{upsert:true})
-    }
     const num = await Animedata.find({}).count();
     res.send("data uploaded: "+num)
   }
@@ -159,11 +153,11 @@ app.post('/courses/byhypenumber',
 )
 
 
-app.post('/courses/byTitle',
+app.post('/courses/bySpecialWord',
   async (req,res,next) => {
-    const {title} = req.body;
+    const {sword} = req.body;
     //const courses = await Animedata.find({title:title})  
-    const courses = await Animedata.find({description:{$regex:title, $options:'i'}})  
+    const courses = await Animedata.find({description:{$regex:sword, $options:'i'}})  
     res.locals.courses = courses
     res.render('courselist')
   }

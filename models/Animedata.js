@@ -10,7 +10,7 @@ var AnimeSchema = Schema( {
     genres: [String],
     hype: Number,
     description: String,
-    title: [String],
+    title: Mixed,
     start_date: Mixed,
  } );
  
