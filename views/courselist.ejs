@@ -1,19 +1,20 @@
-<h1>The courses are</h1>
-Here we want a ul list with the instructor, coursenum, title, term
+<h1>Anime Results</h1>
+
+
 <hr>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th>Semester</th>
-            <th>Course #</th>
-            <th>Course Title</th>
-            <th>Enr/Limit/Waiting</th>
-            <th>Times</th>
-            <th>Instructor</th>
+            <th>Studio</th>
+            <th>Genres</th>
+            <th>Description</th>
+            <th>HypeNumber</th>
+
         </tr>
     </thead>
     <tbody></tbody>
     <% for (course of courses) {
+        const studio = course.studio
         const inst = course['instructor'];
         const term = course.term;
         const sem = term%10;
@@ -21,38 +22,25 @@ Here we want a ul list with the instructor, coursenum, title, term
          %>
         
       <tr class="mb-2"> 
-        <td><%= semester[term%10] %></td>
-        <td>
-            <a href="/courses/show/<%=course._id %>">
-            <%=  course['subject'] %>
-            <%=  course['coursenum'] %>  
-            (Section <%=  course['section'] %>) 
 
-            </a>
+        <td>
+            <strong><%= course.studio %></strong>
         </td>
 
         <td>
-            <strong><%= course.name %></strong>
+            <strong><%= course.genres %></strong>
+        </td>
+        <td>
+            <strong><%= course.description %></strong>
+        </td>
+
+        <td>
+            <strong><%= course.hype %></strong>
         </td>
         <td>
 
         </td>
 
-        <td>
-            <%=course.enrolled %>/<%=course.limit || 999 %>/<%= course.waiting %>
-        </td>
-
-        <td>
-        <% for (t of course.strTimes){%> 
-            <%= t %> <br> 
-        <%} %>
-        </td>
-         <!-- <%= JSON.stringify(course.times) %> <br> -->
-        
-
-        <td>
-          <%= inst[0]+" "+inst[1]%> <br> <%= " ("+inst[2]+")" %>
-        </td>
     </tr>
     <% } %>
     </tbody>
@@ -63,3 +51,21 @@ Here we want a ul list with the instructor, coursenum, title, term
         <%= JSON.stringify(courses,null,5) %> 
     -->
 </pre>
+
+
+
+
+
+
+<!-- {
+    "studio": "Wit Studio",
+    "genres": [
+    ],
+    "hype": 35977,
+    "description": "As the world is in the middle of an industrial revolution, a monster appears that cannot be defeated unless its heart, which is protected by a layer of iron, is pierced. By infecting humans with its bite, the monster can create aggressive and undead creatures known as Kabane. On the island Hinomoto, located in the far east, people have built stations to shelter themselves from these creatures. People access the station, as well as transport wares between them, with the help of a locomotive running on steam, called Hayajiro. Ikoma, a boy who lives in the Aragane station and helps to build Hayajiro, creates his own weapon called Tsuranukizutsu in order to defeat the creatures. One day, as he waits for an opportunity to use his weapon, he meets a girl named Mumei, who is excused from the mandatory Kabane inspection. During the night, Ikuma meets Mumei again as he sees Hayajiro going out of control. The staff on the locomotive has turned into the creatures. The station, now under attack by Kabane, is the opportunity Ikoma has been looking for. (Source: MAL News)",
+    "title": {
+      "link": "http://myanimelist.net/anime/28623/Koutetsujou_no_Kabaneri",
+      "text": "Koutetsujou no Kabaneri"
+    },
+    "start_date": "Apr 8, 2016, 00:55 (JST)"
+  }, -->

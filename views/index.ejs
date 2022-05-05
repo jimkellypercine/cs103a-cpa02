@@ -1,46 +1,38 @@
 
 
     <div class="jumbotron">
-        <h1>PA03: Course Finder Fall20-Spr21 </h1>
+        <h1>PA03: Top Anime Finder!!!  </h1>
         <p></p>
     </div>
-
-    <p class="p-3 m-3 border border-primary bg-light">
-        The goal of this assignment is to write an app that will let
-        students pick their courses for the year. Since we don't have 
-        the data for this year (due to workday issues), we will use the 
-        2020-2021 Academic year data. You must signup or login to see
-        the courses and create your schedule.
-    </p>
-    
-    <% if (true || loggedIn) {%>  
-        <form method="post" action="/courses/bySubject">
-            Show Courses by Subject: 
-              <input type="text" name="subject" 
-                     placeholder="e.g. COSI">
+  
+        <form method="post" action="/courses/byStudio">
+            Show Anime by Studio: 
+              <input type="text" name="studio" 
+                     placeholder="Wit Studio">
             <input type="submit">
         </form>
         <br>
-        <form method="post" action="/courses/byInst">
-            Show Courses by Instructor Email: 
-            <input type="text" name="email" 
-                   placeholder="e.g. tjhickey">
+        <form method="post" action="/courses/byTitle">
+            Show Anime by special Word: 
+            <input type="text" name="title" 
+                   placeholder="Bungou Stray Dogs">
             <input type="submit">
         </form>
         <br>
-        <form method="post" action="/courses/byKeyWord">
-            Show Courses by Keyword: 
-              <input type="text" name="KeyWord" 
-                     placeholder="e.g. Calculus">
+        <form method="post" action="/courses/byhypenumber">
+            Show Anime by hype number: 
+              <input type="text" name="hypenumber" 
+                     placeholder="22">
             <input type="submit">
         </form>
+        
 
         <br>
-        <a href="/schedule/show">Show Schedule</a>
+        <!-- <a href="/schedule/show">Show Schedule</a> -->
        
         
 
 
-    <% } %>
+  
 
 
