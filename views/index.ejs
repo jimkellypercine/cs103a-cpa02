@@ -1,29 +1,42 @@
 
 
-    <div class="jumbotron">
-        <h1>Top Anime Finder!!!  </h1>
+    <div class="jumbotron col-lg-6 offset-lg-3 ">
+        <h1><b> <p style="color:green;">*NEW AND TOP ANIME FINDER*</p></b></h1>
         <p></p>
     </div>
-  
-        <form method="post" action="/courses/byStudio">
-            Show Anime by Studio: 
+    
+    <body>
+        <img src="https://www.pngkey.com/png/full/4-48262_personajes-de-anime-png-death-note-l-notebook.png"  width="200" height="300" >
+     </body>
+     <body>
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/46/Jujutsu_kaisen.jpg"  width="200" height="250" class="col-lg-2 offset-lg-3">
+     </body>
+     <body>
+        <img src="https://i.pinimg.com/originals/37/3e/76/373e7691ecf16e725e49890edbca1b57.jpg"  width="200" height="250" class="col-lg-2 offset-lg-3">
+     </body>
+     
+
+     <br>
+         <form method="post" action="/courses/byStudio"  class="col-lg-6 offset-lg-5">
+            <b> <p style="color:green;">Show Anime by Studio: </p></b>
               <input type="text" name="studio" 
-                     placeholder="Wit Studio">
+                     placeholder="Wit Studio" style="height:50px; width:200px">
             <input type="submit">
         </form>
+        
         <br>
-        <form method="post" action="/courses/bySpecialWord">
-            Show Anime by special Word: 
+        <form method="post" action="/courses/bySpecialWord"  class="col-lg-6 offset-lg-5">
+            <b><p style="color:green;">Show Anime by special Word:</p> </b>
             <input type="text" name="sword" 
-                   placeholder="Bungou Stray Dogs">
+                   placeholder="Bungou Stray Dogs" style="height:50px; width:200px">
             <input type="submit">
         </form>
         <br>
-        <form method="post" action="/courses/byhypenumber">
-            Show Anime by hype number: 
+        <form method="post" action="/courses/byhypenumber" class="col-lg-6 offset-lg-5">
+            <b> <p style="color:green;">Show Anime by hype number:</p> </b>
               <input type="text" name="hypenumber" 
-                     placeholder="22">
-            <input type="submit">
+                     placeholder="22" style="height:50px; width:200px">
+            <input type="submit" >
         </form>
         
 

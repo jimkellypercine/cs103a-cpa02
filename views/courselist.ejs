@@ -1,4 +1,4 @@
-<h1>Anime Results</h1>
+<h1><p style="color:RED;">Anime Results</p></h1>
 
 
 <hr>
@@ -6,12 +6,11 @@
     
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Studio</th>
-            <th>Genres</th>
-            <th>Description</th>
-            <th>HypeNumber</th>
-
+            <th><p style="color:green;">TITLE</p></th>
+            <th><p style="color:green;">STUDIO</p></th>
+            <th><p style="color:green;">GENRES</p></th>
+            <th><p style="color:green;">DESCRIPTION</p></th>
+            <th><p style="color:green;">HYPENUMBER</p></th>
         </tr>
     </thead>
     <tbody></tbody>
@@ -25,30 +24,40 @@
         
       <tr class="mb-2"> 
         <td>
-            <strong><%=course.title.text%></strong>
+            <p style="color:green;"> <strong><%=course.title.text%></strong> </p>
         </td>
 
         <td>
-            <strong><%= course.studio %></strong>
+            <p style="color:green;"> <strong><%= course.studio %></strong></p>
         </td>
 
         <td>
-            <strong><%= course.genres %></strong>
+            <p style="color:green;"> <strong><%= course.genres %></strong></p>
         </td>
         <td>
-            <strong><%= course.description %></strong>
+            <p style="color:green;"> <strong><%= course.description %></strong></p>
         </td>
 
         <td>
-            <strong><%= course.hype %></strong>
+            <p style="color:green;"> <strong><%= course.hype %></strong></p>
         </td>
         <td>
 
         </td>
-
     </tr>
     <% } %>
     </tbody>
+    <body>
+        <img src="https://www.pngkey.com/png/full/4-48262_personajes-de-anime-png-death-note-l-notebook.png"  width="200" height="300" >
+     </body>
+     <body>
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/46/Jujutsu_kaisen.jpg"  width="200" height="250" class="col-lg-2 offset-lg-3">
+     </body>
+     <body>
+        <img src="https://i.pinimg.com/originals/37/3e/76/373e7691ecf16e725e49890edbca1b57.jpg"  width="200" height="250" class="col-lg-2 offset-lg-3">
+     </body>
+     
+
 </table>
 
 <pre>
