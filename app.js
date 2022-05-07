@@ -37,6 +37,7 @@ const atitles = require('./public/data/Animedata.json')
 const mongoose = require( 'mongoose' );
 
 const mongodb_URI = 'mongodb+srv://jimkellypercine:Leaders2020@cluster0.k1uwu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+//const mongodb_URI = process.env.mongodb_URI
 
 
 mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
