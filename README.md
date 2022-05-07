@@ -8,4 +8,4 @@ Zoom video submission Link: https://brandeis.zoom.us/rec/share/qTKayME20d3_UIhPs
 Application pictures below
 
 ![plot](./public/images/secondpicture.png)
-![plot](./public/images/firstimage.png)
+![plot](./public/images/firstimage.png) 
